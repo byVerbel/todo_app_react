@@ -27,6 +27,7 @@ function App() {
 
   const deleteToDo = async (id) => {
     delete_to_do(id);
+    setToDos(to_dos.filter((to_do) => to_do.id !== id));
   }
 
   return (
