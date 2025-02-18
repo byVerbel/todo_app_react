@@ -1,10 +1,18 @@
+import { useState } from 'react';
 
 const AddToDo = ({addToDo}) => {
 
+    const [input, setInput] = useState('');
+
+    const handleAdd = () => {
+        addToDo(input);
+        setInput('');
+    }
+
     return (
         <div className="add-to-do">
-            <input className="add-to-do-input" type="text" />
-            <button className='add-to-do-button' onClick={addToDo}>Add ToDo</button>
+            <input onChange={(e) => setInput(e.target.value)} className="add-to-do-input" type="text" />
+            <button onClick={handleAdd} className='add-to-do-button'>Add ToDo</button>
         </div>
     )
 }
