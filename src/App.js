@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { get_to_dos } from "./api/endpoints";
 
 import ToDoList from './components/ToDoList';
+import AddToDo from "./components/AddToDo";
 
 function App() {
 
@@ -13,8 +14,8 @@ function App() {
 
   useEffect(() => {
     const fetchTodos = async () => {
-        const to_dos = await get_to_dos();
-        setToDos(to_dos);
+      const to_dos = await get_to_dos();
+      setToDos(to_dos);
     }
     fetchTodos();
   }, []);
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <div className="app-container">
         <h1 className="title">ToDo App</h1>
+        <AddToDo />
         <ToDoList to_dos={to_dos} />
       </div>
     </div>
