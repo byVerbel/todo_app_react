@@ -1,11 +1,15 @@
 import ToDo from './ToDo';
 
-const ToDoList = () => {
+const ToDoList = ({to_dos}) => {
     return (
         <div className='to-do-list'>
-            <ToDo to_do_list='ToDo 1'/>
-            <ToDo to_do_list='ToDo 2'/>
-            <ToDo to_do_list='ToDo 3'/>
+            {
+                to_dos.map((to_do) => {
+                    return (
+                        <ToDo key={to_do.id} to_do_name={to_do.name} />
+                    )
+                })
+            }
         </div>
     )
 }

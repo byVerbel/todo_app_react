@@ -15,7 +15,6 @@ function App() {
     const fetchTodos = async () => {
         const to_dos = await get_to_dos();
         setToDos(to_dos);
-        console.log(to_dos)
     }
     fetchTodos();
   }, []);
@@ -24,7 +23,7 @@ function App() {
     <div className="App">
       <div className="app-container">
         <h1 className="title">ToDo App</h1>
-        <ToDoList />
+        <ToDoList to_dos={to_dos} />
       </div>
     </div>
   );
