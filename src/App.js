@@ -21,7 +21,8 @@ function App() {
   }, []);
 
   const addToDo = async (name) => {
-    post_to_do(name);
+    const to_do = await post_to_do(name);
+    setToDos([to_do, ...to_dos]);
   }
 
   return (
