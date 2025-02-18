@@ -3,7 +3,7 @@ import './App.css';
 
 import { useState, useEffect } from 'react';
 
-import { get_to_dos, post_to_do } from "./api/endpoints";
+import { get_to_dos, post_to_do, delete_to_do } from "./api/endpoints";
 
 import ToDoList from './components/ToDoList';
 import AddToDo from "./components/AddToDo";
@@ -25,12 +25,16 @@ function App() {
     setToDos([to_do, ...to_dos]);
   }
 
+  const deleteToDo = async (id) => {
+    delete_to_do(id);
+  }
+
   return (
     <div className="App">
       <div className="app-container">
         <h1 className="title">ToDo App</h1>
         <AddToDo addToDo={addToDo} />
-        <ToDoList to_dos={to_dos} />
+        <ToDoList to_dos={to_dos} deleteToDo={deleteToDo} />
       </div>
     </div>
   );

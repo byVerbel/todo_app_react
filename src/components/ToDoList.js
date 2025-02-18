@@ -1,12 +1,12 @@
 import ToDo from './ToDo';
 
-const ToDoList = ({to_dos}) => {
+const ToDoList = ({to_dos, deleteToDo}) => {
     return (
         <div className='to-do-list'>
             {
                 to_dos.map((to_do) => {
                     return (
-                        <ToDo key={to_do.id} name={to_do.name} />
+                        <ToDo id={to_do.id} name={to_do.name} deleteToDo={deleteToDo} />
                     )
                 })
             }
