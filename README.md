@@ -1,3 +1,20 @@
+# ToDo Application
+
+This project is a ToDo application built with React. It allows users to manage their tasks effectively.
+
+## Key Features
+
+- **Add new tasks:** Users can easily add new tasks to their ToDo list.
+- **View existing tasks:** All tasks are displayed in a clear and organized manner.
+- **Mark tasks as completed:** Users can mark tasks as completed to track their progress.
+- **Delete tasks:** Unwanted tasks can be removed from the list.
+
+## Backend API
+
+The application interacts with a backend API, assumed to be running at `http://localhost:3000/api`, for data persistence. Ensure the backend server is running for the application to function correctly.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
